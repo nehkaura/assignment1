@@ -29,6 +29,14 @@ public class UserTest {
 
         remote.setCommand(new TrunOffCoolerCommand( cooler2 ));
         remote.buttonPressed();
+        
+          //user test code with bug
+
+        remote.setCommand(new TurnOnFanCommand(fan1));
+        remote.buttonPressed();
+
+        remote.setCommand(new TrunOffFanCommand(fan1));
+        remote.buttonPressed();
 
     }
 }
