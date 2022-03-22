@@ -10,6 +10,8 @@ public class UserTest {
 
         Cooler cooler2 = new Cooler();
 
+        Fan fan1 = new Fan();
+
         RemoteControl remote = new RemoteControl();
 
         remote.setCommand(new TurnOnLightCommand( light1 ));
@@ -29,6 +31,15 @@ public class UserTest {
 
         remote.setCommand(new TrunOffCoolerCommand( cooler2 ));
         remote.buttonPressed();
+
+        //user test code with bug
+
+        remote.setCommand(new TurnOnFanCommand(fan1));
+        remote.buttonPressed();
+
+        remote.setCommand(new TrunOffFanCommand(fan1));
+        remote.buttonPressed();
+
 
     }
 }
